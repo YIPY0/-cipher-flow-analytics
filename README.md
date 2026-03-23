@@ -95,32 +95,6 @@ cipher-flow-analytics/
 └── .gitignore
 ```
 
-## 📂 Project Structure
-
-```text
-cipher-flow-analytics/
-│
-├── backend/
-│   ├── api/
-│   ├── ml/
-│   ├── models/
-│   ├── data/
-│   ├── main.py
-│   ├── config.py
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── scripts/
-│   ├── train_pipeline.py
-│   └── download_dataset.py
-│
-├── README.md
-└── .gitignore
-```
 ```
 
 ---
