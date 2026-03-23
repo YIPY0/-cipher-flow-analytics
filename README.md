@@ -74,22 +74,52 @@ Live Dashboard + Alert System
 cipher-flow-analytics/
 │
 ├── backend/
+│   ├── main.py                   # FastAPI app + packet capture
+│   ├── config.py                 # Configuration
+│   ├── requirements.txt          # Python dependencies
+│   │
 │   ├── api/
+│   │   ├── routes.py             # REST API endpoints
+│   │   └── websocket_manager.py  # WebSocket handler
+│   │
 │   ├── ml/
-│   ├── models/
-│   ├── data/
-│   ├── main.py
-│   ├── config.py
-│   └── requirements.txt
+│   │   ├── dataset_prep.py       # Data preprocessing
+│   │   ├── train_random_forest.py
+│   │   ├── train_isolation_forest.py
+│   │   ├── explainability.py     # SHAP integration
+│   │   └── evaluation.py         # Metrics calculation
+│   │
+│   ├── models/                   # Trained models (generated)
+│   │   ├── random_forest.joblib
+│   │   ├── isolation_forest.joblib
+│   │   ├── scaler.joblib
+│   │   └── label_encoder.joblib
+│   │
+│   └── data/
+│       └── raw/                  # CIC-IDS2017 CSV files
 │
 ├── frontend/
-│   ├── src/
 │   ├── package.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   │
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       │
+│       ├── components/
+│       │   ├── LiveDashboard.jsx
+│       │   ├── ThreatTable.jsx
+│       │   ├── FlowVisualizer.jsx
+│       │   └── ShapPanel.jsx
+│       │
+│       └── pages/
+│           ├── Dashboard.jsx
+│           ├── ThreatsPage.jsx
+│           └── AlertsPage.jsx
 │
 ├── scripts/
-│   ├── train_pipeline.py
-│   └── download_dataset.py
+│   ├── train_pipeline.py         # ML training script
+│   └── download_dataset.py       # Dataset downloader
 │
 ├── README.md
 └── .gitignore
