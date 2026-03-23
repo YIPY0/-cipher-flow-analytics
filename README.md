@@ -1,7 +1,7 @@
 # 🔒 CipherFlow Analytics  
 **Real-Time Network Intrusion Detection System with Explainable Machine Learning**
 
-> **Academic Technical Project (9 Credits)**  
+> **Academic Technical Project**  
 > Production-oriented cybersecurity platform for live traffic monitoring, anomaly detection, and explainable intrusion analysis.
 
 ---
